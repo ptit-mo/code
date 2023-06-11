@@ -1,4 +1,7 @@
-# Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN} và số tự nhiên K(K <= N <= 100). Ta gọi một dãy con tăng dần bậc K của dãy số AN là một dãy các số gồm K phần tử trong dãy đó thỏa mãn tính chất tăng dần. Bài toán được đặt ra là in ra màn hình  số các dãy con tăng dần bậc K của dãy số AN. Ví dụ:
+# Cho dãy gồm N số phân biệt AN = {a1, a2, .., aN} và số tự nhiên K(K <= N <= 100). 
+# Ta gọi một dãy con tăng dần bậc K của dãy số AN là một dãy các số gồm K phần tử 
+# trong dãy đó thỏa mãn tính chất tăng dần. Bài toán được đặt ra là in ra màn hình  
+# số các dãy con tăng dần bậc K của dãy số AN. Ví dụ:
 # Input:
 # 5    3
 # 2    5    15   10    20
