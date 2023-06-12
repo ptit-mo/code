@@ -3,7 +3,7 @@ using namespace std;
 void xuly(string s){
     stack<char> st;  int count = 0,i;
     for(i = 0; i < s.length(); i++){
-        if (s[i] != ')') st.push(s[i]);
+        if (s[i] == '(') st.push(s[i]);
         else{
             if (st.size() == 0){
                 st.push('(');
