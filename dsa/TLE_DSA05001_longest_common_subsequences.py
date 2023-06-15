@@ -15,15 +15,13 @@
 tests = int(input())
 
 for _ in range(tests):
-	x, y = list(input()), list(input())
-	rows, cols = len(x)+1, len(y)+1
-	matt = [[0] * cols] * rows
-	for row in range(1, rows):
-		for col in range(1, cols):
-			if x[row-1] == y[col-1]:
-					matt[row][col] = 1+matt[row-1][col-1]
-			else:
-					matt[row][col] = max(matt[row][col-1], matt[row-1][col])
-	print(matt[-1][-1])
-
-
+    x, y = list(input()), list(input())
+    rows, cols = len(x)+1, len(y)+1
+    matt = [[0 for _ in range(cols)] for _ in range(rows)]
+    for row in range(1, rows):
+        for col in range(1, cols):
+            if x[row-1] == y[col-1]:
+                matt[row][col] = 1+matt[row-1][col-1]
+            else:
+                matt[row][col] = max(matt[row][col-1], matt[row-1][col])
+    print(matt[-1][-1])
