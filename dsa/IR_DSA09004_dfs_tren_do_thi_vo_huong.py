@@ -28,12 +28,15 @@
 
 def main():
     for _ in range(int(input())):
-        _, edgesCount, start = [int(x) for x in input().split()]
-        edges = []
-        for _ in range(edgesCount):
-            edges.append([int(x) for x in input().split()])
-        graph = switch(edges)
-        # print(' '.join([str(x) for x in graph.keys()]))
+        verticesNum, edgesNum, start = [int(x) for x in input().split()]
+        graph = {}
+        for _ in range(edgesNum):
+            a, b = [int(x) for x in input().split()]
+            graph[a] = [b] + graph.get(a, [])
+            graph[b] = [a] + graph.get(b, [])
+        for i in range(1, verticesNum+1):
+            if i not in graph:
+                graph[i] = []
         dfs(graph, start)
 
 
